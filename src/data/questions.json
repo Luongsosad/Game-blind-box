@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "React là gì?",
+    "answers": [
+      "Thư viện JavaScript để xây dựng giao diện người dùng",
+      "Ngôn ngữ lập trình mới",
+      "Framework backend",
+      "Hệ quản trị cơ sở dữ liệu"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 2,
+    "question": "JSX là viết tắt của gì?",
+    "answers": [
+      "JavaScript XML",
+      "Java Syntax Extension",
+      "JavaScript Extreme",
+      "JSON XML"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 3,
+    "question": "Hook nào được sử dụng để quản lý state trong React?",
+    "answers": [
+      "useEffect",
+      "useState",
+      "useContext",
+      "useReducer"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 4,
+    "question": "HTML là viết tắt của gì?",
+    "answers": [
+      "Hyper Text Markup Language",
+      "High Tech Modern Language",
+      "Home Tool Markup Language",
+      "Hyperlinks and Text Markup Language"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 5,
+    "question": "CSS dùng để làm gì?",
+    "answers": [
+      "Tạo cơ sở dữ liệu",
+      "Trang trí và định dạng giao diện web",
+      "Lập trình logic",
+      "Quản lý server"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 6,
+    "question": "JavaScript được tạo ra bởi ai?",
+    "answers": [
+      "Bill Gates",
+      "Mark Zuckerberg",
+      "Brendan Eich",
+      "Tim Berners-Lee"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "question": "NPM là viết tắt của gì?",
+    "answers": [
+      "Node Package Manager",
+      "New Programming Method",
+      "Network Protocol Manager",
+      "Node Programming Model"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 8,
+    "question": "Phương thức nào được dùng để thêm phần tử vào cuối mảng?",
+    "answers": [
+      "push()",
+      "pop()",
+      "shift()",
+      "unshift()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 9,
+    "question": "Git là gì?",
+    "answers": [
+      "Ngôn ngữ lập trình",
+      "Hệ quản trị cơ sở dữ liệu",
+      "Hệ thống quản lý phiên bản",
+      "Framework JavaScript"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "Vite được dùng để làm gì?",
+    "answers": [
+      "Build tool cho web development",
+      "Testing framework",
+      "Database management",
+      "Styling library"
+    ],
+    "correctAnswer": 0
+  }
+]
