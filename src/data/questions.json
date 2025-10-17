@@ -1,112 +1,122 @@
 [
   {
     "id": 1,
-    "question": "React là gì?",
+    "question": "Phong cách văn bản khoa học là:",
     "answers": [
-      "Thư viện JavaScript để xây dựng giao diện người dùng",
-      "Ngôn ngữ lập trình mới",
-      "Framework backend",
-      "Hệ quản trị cơ sở dữ liệu"
+      "Cách dùng ngôn ngữ để truyền đạt tri thức chính xác, khách quan, logic",
+      "Cách viết văn biểu cảm",
+      "Cách kể chuyện hấp dẫn",
+      "Cách nói thân mật trong giao tiếp"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 0,
+    "explanation": "Phong cách văn bản khoa học đặc trưng bởi cách dùng ngôn ngữ chính xác, khách quan và có tính logic để truyền đạt tri thức khoa học một cách nghiêm túc."
   },
   {
     "id": 2,
-    "question": "JSX là viết tắt của gì?",
+    "question": "Đặc điểm nào KHÔNG phải của phong cách văn bản khoa học?",
     "answers": [
-      "JavaScript XML",
-      "Java Syntax Extension",
-      "JavaScript Extreme",
-      "JSON XML"
+      "Tính chính xác",
+      "Tính khách quan",
+      "Tính biểu cảm",
+      "Tính logic"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2,
+    "explanation": "Tính biểu cảm thuộc về văn bản văn học, không phải là đặc điểm của văn bản khoa học. Văn bản khoa học cần có tính chính xác, khách quan và logic."
   },
   {
     "id": 3,
-    "question": "Hook nào được sử dụng để quản lý state trong React?",
+    "question": "Thuật ngữ khoa học có vai trò gì trong văn bản khoa học?",
     "answers": [
-      "useEffect",
-      "useState",
-      "useContext",
-      "useReducer"
+      "Làm cho văn bản dài hơn",
+      "Thể hiện sự uyên bác của người viết",
+      "Đảm bảo tính chính xác và chuyên môn",
+      "Tạo sự khó hiểu cho người đọc"
     ],
-    "correctAnswer": 1
+    "correctAnswer": 2,
+    "explanation": "Thuật ngữ khoa học giúp đảm bảo tính chính xác và tính chuyên môn trong việc truyền đạt các khái niệm, hiện tượng khoa học một cách rõ ràng và không gây nhầm lẫn."
   },
   {
     "id": 4,
-    "question": "HTML là viết tắt của gì?",
+    "question": "Trong văn bản khoa học, tính logic được thể hiện qua:",
     "answers": [
-      "Hyper Text Markup Language",
-      "High Tech Modern Language",
-      "Home Tool Markup Language",
-      "Hyperlinks and Text Markup Language"
+      "Cách sắp xếp câu từ ngắn gọn",
+      "Cách trình bày có hệ thống, mạch lạc từ nguyên nhân đến kết quả",
+      "Sử dụng nhiều từ ngữ hoa mỹ",
+      "Viết theo cảm hứng tự do"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1,
+    "explanation": "Tính logic trong văn bản khoa học được thể hiện qua cách trình bày có hệ thống, mạch lạc, suy luận chặt chẽ từ nguyên nhân đến kết quả, từ tiền đề đến kết luận."
   },
   {
     "id": 5,
-    "question": "CSS dùng để làm gì?",
+    "question": "Tại sao văn bản khoa học cần có tính khách quan?",
     "answers": [
-      "Tạo cơ sở dữ liệu",
-      "Trang trí và định dạng giao diện web",
-      "Lập trình logic",
-      "Quản lý server"
+      "Để người đọc không cảm thấy nhàm chán",
+      "Để phản ánh sự thật một cách trung thực, không pha trộn cảm xúc cá nhân",
+      "Để tránh sử dụng từ ngữ khó",
+      "Để văn bản ngắn gọn hơn"
     ],
-    "correctAnswer": 1
+    "correctAnswer": 1,
+    "explanation": "Tính khách quan đảm bảo văn bản khoa học phản ánh sự thật một cách trung thực, dựa trên dữ liệu và bằng chứng thực tế, không bị ảnh hưởng bởi cảm xúc hay quan điểm chủ quan cá nhân."
   },
   {
     "id": 6,
-    "question": "JavaScript được tạo ra bởi ai?",
+    "question": "Câu nào dưới đây phù hợp với phong cách văn bản khoa học?",
     "answers": [
-      "Bill Gates",
-      "Mark Zuckerberg",
-      "Brendan Eich",
-      "Tim Berners-Lee"
+      "Thí nghiệm này thật tuyệt vời và đáng kinh ngạc!",
+      "Kết quả thí nghiệm cho thấy nhiệt độ tăng 10°C sau 5 phút.",
+      "Em rất thích làm thí nghiệm này vì nó rất hay!",
+      "Thí nghiệm vừa rồi làm em bất ngờ quá!"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1,
+    "explanation": "Câu 'Kết quả thí nghiệm cho thấy nhiệt độ tăng 10°C sau 5 phút' là câu khoa học vì trình bày kết quả cụ thể, chính xác, khách quan, không có cảm xúc cá nhân."
   },
   {
     "id": 7,
-    "question": "NPM là viết tắt của gì?",
+    "question": "Loại từ nào thường được sử dụng nhiều trong văn bản khoa học?",
     "answers": [
-      "Node Package Manager",
-      "New Programming Method",
-      "Network Protocol Manager",
-      "Node Programming Model"
+      "Từ cảm thán",
+      "Từ địa phương",
+      "Thuật ngữ chuyên ngành",
+      "Từ lóng"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2,
+    "explanation": "Thuật ngữ chuyên ngành là các từ ngữ có nghĩa xác định, được sử dụng trong một lĩnh vực cụ thể, giúp truyền đạt thông tin khoa học một cách chính xác và chuyên nghiệp."
   },
   {
     "id": 8,
-    "question": "Phương thức nào được dùng để thêm phần tử vào cuối mảng?",
+    "question": "Vì sao trong văn bản khoa học cần hạn chế dùng từ như \"tuyệt vời\", \"đáng yêu\", \"hấp dẫn\"?",
     "answers": [
-      "push()",
-      "pop()",
-      "shift()",
-      "unshift()"
+      "Vì đó là từ địa phương",
+      "Vì không phù hợp với tính khách quan, nghiêm túc của phong cách khoa học",
+      "Vì không có trong từ điển",
+      "Vì quá ngắn gọn"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1,
+    "explanation": "Các từ như 'tuyệt vời', 'đáng yêu', 'hấp dẫn' là những từ cảm tính, mang tính chủ quan và cảm xúc cá nhân, không phù hợp với tính khách quan và nghiêm túc của văn bản khoa học."
   },
   {
     "id": 9,
-    "question": "Git là gì?",
+    "question": "Hãy xác định lỗi sai về phong cách trong câu: \"Kết quả thí nghiệm thật là tuyệt vời, khiến chúng tôi vô cùng bất ngờ!\"",
     "answers": [
-      "Ngôn ngữ lập trình",
-      "Hệ quản trị cơ sở dữ liệu",
-      "Hệ thống quản lý phiên bản",
-      "Framework JavaScript"
+      "Dùng sai cấu trúc ngữ pháp",
+      "Dùng ngôn ngữ cảm tính, thiếu khách quan",
+      "Thiếu thuật ngữ khoa học",
+      "Dẫn chứng không đầy đủ"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1,
+    "explanation": "Câu này sử dụng ngôn ngữ cảm tính với các từ 'tuyệt vời', 'vô cùng bất ngờ' thể hiện cảm xúc cá nhân, vi phạm tính khách quan của văn bản khoa học."
   },
   {
     "id": 10,
-    "question": "Vite được dùng để làm gì?",
+    "question": "Câu \"Thí nghiệm thật là vui và hấp dẫn, em thấy rất thú vị khi làm!\" vi phạm đặc điểm nào của phong cách văn bản khoa học?",
     "answers": [
-      "Build tool cho web development",
-      "Testing framework",
-      "Database management",
-      "Styling library"
+      "Tính chính xác",
+      "Tính khách quan",
+      "Tính logic",
+      "Tính khái quát"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1,
+    "explanation": "Câu này chứa nhiều cảm xúc cá nhân ('vui', 'hấp dẫn', 'thú vị') nên vi phạm tính khách quan - một đặc điểm quan trọng của văn bản khoa học."
   }
 ]

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function QuestionScreen({ question, onAnswerSubmit }) {
+function QuestionScreen({ question, onAnswerSubmit, onBackToSelection, onNextQuestion }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [answered, setAnswered] = useState(false)
 
@@ -16,6 +16,10 @@ function QuestionScreen({ question, onAnswerSubmit }) {
     setAnswered(true)
     const isCorrect = selectedAnswer === question.correctAnswer
     onAnswerSubmit(isCorrect)
+  }
+
+  const handleNext = () => {
+    onNextQuestion()
   }
 
   const getAnswerClass = (index) => {
@@ -47,8 +51,7 @@ function QuestionScreen({ question, onAnswerSubmit }) {
         </div>
         
         <div className="question-header-fancy">
-          <div className="question-icon">❓</div>
-          <h2 className="question-title">CHIẾC TÚI MÙ SỐ</h2>
+          <h2 className="question-title">❓ TÚI MÙ SỐ {question.boxNumber}</h2>
         </div>
 
         <div className="question-content">
@@ -85,19 +88,40 @@ function QuestionScreen({ question, onAnswerSubmit }) {
               Xác nhận đáp án
             </button>
           ) : (
-            <div className={`result-message ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}`}>
-              {selectedAnswer === question.correctAnswer ? (
-                <>
-                  <span className="result-icon">🎉</span>
-                  <span>Chính xác! Bạn đã trả lời đúng!</span>
-                </>
-              ) : (
-                <>
-                  <span className="result-icon">😔</span>
-                  <span>Rất tiếc! Đáp án đúng là {answerLabels[question.correctAnswer]}</span>
-                </>
+            <>
+              <div className={`result-message ${selectedAnswer === question.correctAnswer ? 'correct' : 'incorrect'}`}>
+                {selectedAnswer === question.correctAnswer ? (
+                  <>
+                    <span className="result-icon">🎉</span>
+                    <span>Chính xác! Bạn đã trả lời đúng!</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="result-icon">😔</span>
+                    <span>Rất tiếc! Đáp án đúng là {answerLabels[question.correctAnswer]}</span>
+                  </>
+                )}
+              </div>
+
+              {question.explanation && (
+                <div className="explanation-box">
+                  <div className="explanation-header">
+                    <span className="explanation-icon">💡</span>
+                    <span className="explanation-title">Giải thích</span>
+                  </div>
+                  <p className="explanation-text">{question.explanation}</p>
+                </div>
               )}
-            </div>
+
+              <div className="navigation-buttons">
+                <button onClick={onBackToSelection} className="btn-back">
+                  🔙 Về màn hình chính
+                </button>
+                <button onClick={handleNext} className="btn-next">
+                  Câu tiếp theo ➡️
+                </button>
+              </div>
+            </>
           )}
         </div>
       </div>

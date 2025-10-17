@@ -18,10 +18,10 @@ function GiftBoxSelection({ questions, answeredQuestions, onBoxSelect, score, co
     <div className="selection-container">
       <div className="selection-header">
         <h1 className="game-title">🎁 TÚI MÙ BÍ ẨN</h1>
-        <p className="game-subtitle">Chọn một túi quà để mở câu hỏi bí mật!</p>
+        <p className="game-subtitle">Chọn một túi quà để mở câu hỏi bí mật và nhận những phần quà hấp dẫn</p>
       </div>
 
-      <div className="score-dashboard">
+      {/* <div className="score-dashboard">
         <div className="score-card">
           <span className="score-label">Điểm số</span>
           <span className="score-value">{score}</span>
@@ -38,7 +38,7 @@ function GiftBoxSelection({ questions, answeredQuestions, onBoxSelect, score, co
           <span className="score-label">Còn lại</span>
           <span className="score-value">{questions.length - answeredQuestions.length}</span>
         </div>
-      </div>
+      </div> */}
 
       <div className="gift-boxes-grid">
         {questions.map((question, index) => {

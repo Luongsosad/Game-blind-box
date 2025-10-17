@@ -18,7 +18,8 @@ function QuizGame() {
   }, [])
 
   const handleBoxSelect = (questionId) => {
-    const question = questions.find(q => q.id === questionId)
+    const questionIndex = questions.findIndex(q => q.id === questionId)
+    const question = { ...questions[questionIndex], boxNumber: questionIndex + 1 }
     setCurrentQuestion(question)
     setGameState('question')
   }
@@ -32,12 +33,18 @@ function QuizGame() {
     }
     
     setAnsweredQuestions([...answeredQuestions, currentQuestion.id])
-    
+  }
+
+  const handleBackToSelection = () => {
+    setGameState('selection')
+  }
+
+  const handleNextQuestion = () => {
     // Check if all questions answered
     if (answeredQuestions.length + 1 === questions.length) {
-      setTimeout(() => setGameState('result'), 1500)
+      setGameState('result')
     } else {
-      setTimeout(() => setGameState('selection'), 1500)
+      setGameState('selection')
     }
   }
 
@@ -67,6 +74,8 @@ function QuizGame() {
         <QuestionScreen
           question={currentQuestion}
           onAnswerSubmit={handleAnswerSubmit}
+          onBackToSelection={handleBackToSelection}
+          onNextQuestion={handleNextQuestion}
         />
       )}
       
