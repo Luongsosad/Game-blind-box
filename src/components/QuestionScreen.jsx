@@ -77,8 +77,8 @@ function QuestionScreen({ question, onAnswerSubmit, onBackToSelection, onNextQue
       <audio ref={correctSoundRef} src="/sounds/correct.mp3" />
       <audio ref={wrongSoundRef} src="/sounds/wrong.mp3" />
 
-      <div className="question-card-fancy">
-        <div>
+      <div className={`question-card-fancy ${answered ? 'has-explanation' : ''}`}>
+        <div className="question-main-content">
           <div className="confetti">
             {[...Array(20)].map((_, i) => (
               <div key={i} className="confetti-piece" style={{
@@ -164,24 +164,19 @@ function QuestionScreen({ question, onAnswerSubmit, onBackToSelection, onNextQue
               </>
             )}
           </div>
-
         </div>
 
-        <div className='question-card-fancy-1'>
-          {answered && <>
-            {question.explanation && (
-              <div className="explanation-box">
-                <div className="explanation-header">
-                  <span className="explanation-icon">💡</span>
-                  <span className="explanation-title">Giải thích</span>
-                </div>
-                <p className="explanation-text">{question.explanation}</p>
+        {answered && question.explanation && (
+          <div className="question-card-fancy-1">
+            <div className="explanation-box">
+              <div className="explanation-header">
+                <span className="explanation-icon">💡</span>
+                <span className="explanation-title">Giải thích</span>
               </div>
-            )}
-
-
-          </>}
-        </div>
+              <p className="explanation-text">{question.explanation}</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
