@@ -1,26 +1,53 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import questionsData from '../data/questions.json'
 import GiftBoxSelection from './GiftBoxSelection'
+import CongratulationScreen from './CongratulationScreen'
 import QuestionScreen from './QuestionScreen'
 import ResultScreen from './ResultScreen'
 
 function QuizGame() {
-  const [gameState, setGameState] = useState('selection') // 'selection', 'question', 'result'
+  const [gameState, setGameState] = useState('selection') // 'selection', 'congratulation', 'question', 'result'
   const [questions, setQuestions] = useState([])
   const [answeredQuestions, setAnsweredQuestions] = useState([])
   const [currentQuestion, setCurrentQuestion] = useState(null)
   const [score, setScore] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState(0)
   const [incorrectAnswers, setIncorrectAnswers] = useState(0)
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false)
+  
+  const backgroundMusicRef = useRef(null)
 
   useEffect(() => {
     setQuestions(questionsData)
   }, [])
 
+  // Quản lý nhạc nền
+  useEffect(() => {
+    if (backgroundMusicRef.current) {
+      backgroundMusicRef.current.volume = 0.3 // Giảm âm lượng xuống 30%
+      
+      if (isMusicPlaying) {
+        backgroundMusicRef.current.play().catch(err => {
+          console.log('Không thể phát nhạc nền:', err)
+        })
+      } else {
+        backgroundMusicRef.current.pause()
+      }
+    }
+  }, [isMusicPlaying])
+
+  const toggleMusic = () => {
+    setIsMusicPlaying(!isMusicPlaying)
+  }
+
   const handleBoxSelect = (questionId) => {
     const questionIndex = questions.findIndex(q => q.id === questionId)
     const question = { ...questions[questionIndex], boxNumber: questionIndex + 1 }
     setCurrentQuestion(question)
+    setGameState('congratulation') // Hiện màn hình chúc mừng trước
+  }
+
+  const handleContinueToQuestion = () => {
     setGameState('question')
   }
 
@@ -59,6 +86,14 @@ function QuizGame() {
 
   return (
     <div className="game-wrapper">
+      {/* Nhạc nền */}
+      <audio ref={backgroundMusicRef} src="/sounds/background.mp3" loop />
+      
+      {/* Nút điều khiển nhạc */}
+      <button className="music-toggle" onClick={toggleMusic}>
+        {isMusicPlaying ? '🔊' : '🔇'}
+      </button>
+
       {gameState === 'selection' && (
         <GiftBoxSelection
           questions={questions}
@@ -67,6 +102,13 @@ function QuizGame() {
           score={score}
           correctAnswers={correctAnswers}
           incorrectAnswers={incorrectAnswers}
+        />
+      )}
+
+      {gameState === 'congratulation' && currentQuestion && (
+        <CongratulationScreen
+          boxNumber={currentQuestion.boxNumber}
+          onContinue={handleContinueToQuestion}
         />
       )}
       
